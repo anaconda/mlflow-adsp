@@ -1,0 +1,89 @@
+ # replica count
+replicaCount: 1
+
+# Image
+image:
+  # -- The docker image repository to use
+  repository: "" # required
+  # -- The docker image pull policy
+  pullPolicy: Always
+  # -- The docker image tag to use.
+  tag: "latest" # required
+
+# -- Image pull secrets for private docker registry usages
+imagePullSecrets: []
+
+# -- Set the resources requests and limits
+resources: {}
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+# -- Set the node selector for the pod.
+nodeSelector: {}
+
+# -- Set the tolerations for the pod.
+tolerations:
+  - key: "node.kubernetes.io/unreachable"
+    operator: "Exists"
+    effect: "NoExecute"
+    tolerationSeconds: 300
+  - key: "node.kubernetes.io/not-ready"
+    operator: "Exists"
+    effect: "NoExecute"
+    tolerationSeconds: 300
+  - key: "application"
+    operator: "Equal"
+    effect: "NoSchedule"
+    value: "anaconda"
+
+# -- Set the affinity for the pod.
+affinity: {}
+
+# MLflow Tracking Configuration
+mlflow:
+  enabled: true
+  tracking:
+    uri: https://mlflow.anaconda.example.com
+#    token: "<< SECRET ACCESS TOKEN >>"
+#    insecureTls: true
+  registry:
+    uri: https://mlflow.anaconda.example.com
+
+# Model Configuration
+model:
+  # conda - for MLmodel conda environment
+  # local - for container environment
+  envManager: conda # required
+
+  # Stage and Alias based URIs will reload when versions chance if MLflow tracking is enabled.
+  # See https://www.mlflow.org/docs/latest/concepts.html#artifact-locations for supported URIs.
+  # example: uri: models:/demo_wine_quality/Production
+  uri: "" # required
+
+endpoint:
+  # Server Configuration
+  host: 0.0.0.0
+  port: 80
+  trackingHeartBeat: 5
+  mlserver: False
+
+  # supports: notset, info, debug, warn, warning, error, critical
+  logLevel: debug
+  adspServeMaxTries: 180
+  adspServeTimeout: 5
+
+service:
+  # -- Specifies what type of Service should be created
+  type: ClusterIP
+  # -- Default Service port
+  port: 80
+  # -- Default Service name
+  name: http

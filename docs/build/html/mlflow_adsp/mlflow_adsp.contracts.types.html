@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Types &mdash; MLFlow Plugin For The Anaconda Data Science Platform 0.43.0+0.g454b369.dirty documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Services" href="mlflow_adsp.services.html" />
+    <link rel="prev" title="Errors" href="mlflow_adsp.contracts.errors.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MLFlow Plugin For The Anaconda Data Science Platform
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation_guide.html">Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow_setup_guide.html">Workflow Setup Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow_usage_and_configuration.html">Workflow Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow_usage_and_configuration.html#configuration-options">Configuration Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../model_serving.html">Model Serving</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../model_serving.html#docker-containerization">Docker Containerization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cli.html">Command Line Interface</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="mlflow_adsp.html">Plugin API Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="mlflow_adsp.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="mlflow_adsp.common.html">Common</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="mlflow_adsp.contracts.html">Contracts</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="mlflow_adsp.contracts.dto.html">DTOs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mlflow_adsp.contracts.errors.html">Errors</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Types</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="mlflow_adsp.services.html">Services</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="mlflow_adsp.html#adsp-project-backend">ADSP Project Backend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mlflow_adsp.html#serve">Serve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mlflow_adsp.html#adsp-submitted-run">ADSP Submitted Run</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MLFlow Plugin For The Anaconda Data Science Platform</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="mlflow_adsp.html">Plugin API Documentation</a></li>
+          <li class="breadcrumb-item"><a href="mlflow_adsp.contracts.html">Contracts</a></li>
+      <li class="breadcrumb-item active">Types</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/mlflow_adsp/mlflow_adsp.contracts.types.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="types">
+<h1>Types<a class="headerlink" href="#types" title="Permalink to this heading"></a></h1>
+<section id="module-mlflow_adsp.contracts.types.job_run_state">
+<span id="ae-project-job-run-state-type"></span><h2>AE Project Job Run State Type<a class="headerlink" href="#module-mlflow_adsp.contracts.types.job_run_state" title="Permalink to this heading"></a></h2>
+<p>Anaconda Enterprise Project Job Run State Type Definition</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="mlflow_adsp.contracts.types.job_run_state.AEProjectJobRunStateType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlflow_adsp.contracts.types.job_run_state.</span></span><span class="sig-name descname"><span class="pre">AEProjectJobRunStateType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlflow_adsp.contracts.types.job_run_state.AEProjectJobRunStateType" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Anaconda Enterprise Project Job Run State Type Enumeration</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mlflow_adsp.contracts.types.job_run_state.AEProjectJobRunStateType.COMPLETED">
+<span class="sig-name descname"><span class="pre">COMPLETED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'completed'</span></em><a class="headerlink" href="#mlflow_adsp.contracts.types.job_run_state.AEProjectJobRunStateType.COMPLETED" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mlflow_adsp.contracts.types.job_run_state.AEProjectJobRunStateType.FAILED">
+<span class="sig-name descname"><span class="pre">FAILED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'failed'</span></em><a class="headerlink" href="#mlflow_adsp.contracts.types.job_run_state.AEProjectJobRunStateType.FAILED" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mlflow_adsp.contracts.types.job_run_state.AEProjectJobRunStateType.INITIAL">
+<span class="sig-name descname"><span class="pre">INITIAL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'initial'</span></em><a class="headerlink" href="#mlflow_adsp.contracts.types.job_run_state.AEProjectJobRunStateType.INITIAL" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mlflow_adsp.contracts.types.job_run_state.AEProjectJobRunStateType.RUNNING">
+<span class="sig-name descname"><span class="pre">RUNNING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'running'</span></em><a class="headerlink" href="#mlflow_adsp.contracts.types.job_run_state.AEProjectJobRunStateType.RUNNING" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mlflow_adsp.contracts.types.job_run_state.AEProjectJobRunStateType.STOPPED">
+<span class="sig-name descname"><span class="pre">STOPPED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'stopped'</span></em><a class="headerlink" href="#mlflow_adsp.contracts.types.job_run_state.AEProjectJobRunStateType.STOPPED" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-mlflow_adsp.contracts.types.log_level">
+<span id="log-level-type"></span><h2>Log Level Type<a class="headerlink" href="#module-mlflow_adsp.contracts.types.log_level" title="Permalink to this heading"></a></h2>
+<p>Log Level Definition</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="mlflow_adsp.contracts.types.log_level.LogLevel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlflow_adsp.contracts.types.log_level.</span></span><span class="sig-name descname"><span class="pre">LogLevel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlflow_adsp.contracts.types.log_level.LogLevel" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Python Log Levels
+<a class="reference external" href="https://docs.python.org/3.11/library/logging.html#levels">https://docs.python.org/3.11/library/logging.html#levels</a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mlflow_adsp.contracts.types.log_level.LogLevel.CRITICAL">
+<span class="sig-name descname"><span class="pre">CRITICAL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'critical'</span></em><a class="headerlink" href="#mlflow_adsp.contracts.types.log_level.LogLevel.CRITICAL" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mlflow_adsp.contracts.types.log_level.LogLevel.DEBUG">
+<span class="sig-name descname"><span class="pre">DEBUG</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'debug'</span></em><a class="headerlink" href="#mlflow_adsp.contracts.types.log_level.LogLevel.DEBUG" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mlflow_adsp.contracts.types.log_level.LogLevel.ERROR">
+<span class="sig-name descname"><span class="pre">ERROR</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'error'</span></em><a class="headerlink" href="#mlflow_adsp.contracts.types.log_level.LogLevel.ERROR" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mlflow_adsp.contracts.types.log_level.LogLevel.INFO">
+<span class="sig-name descname"><span class="pre">INFO</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'info'</span></em><a class="headerlink" href="#mlflow_adsp.contracts.types.log_level.LogLevel.INFO" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mlflow_adsp.contracts.types.log_level.LogLevel.NOTSET">
+<span class="sig-name descname"><span class="pre">NOTSET</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'notset'</span></em><a class="headerlink" href="#mlflow_adsp.contracts.types.log_level.LogLevel.NOTSET" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mlflow_adsp.contracts.types.log_level.LogLevel.WARN">
+<span class="sig-name descname"><span class="pre">WARN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'warn'</span></em><a class="headerlink" href="#mlflow_adsp.contracts.types.log_level.LogLevel.WARN" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mlflow_adsp.contracts.types.log_level.LogLevel.WARNING">
+<span class="sig-name descname"><span class="pre">WARNING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'warning'</span></em><a class="headerlink" href="#mlflow_adsp.contracts.types.log_level.LogLevel.WARNING" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-mlflow_adsp.contracts.types.reloadable_model_uri_type">
+<span id="reloadable-model-uri-type"></span><h2>Reloadable Model Uri Type<a class="headerlink" href="#module-mlflow_adsp.contracts.types.reloadable_model_uri_type" title="Permalink to this heading"></a></h2>
+<p>Reloadable Model URI Type Definition</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="mlflow_adsp.contracts.types.reloadable_model_uri_type.ReloadableModelUriType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlflow_adsp.contracts.types.reloadable_model_uri_type.</span></span><span class="sig-name descname"><span class="pre">ReloadableModelUriType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlflow_adsp.contracts.types.reloadable_model_uri_type.ReloadableModelUriType" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Reloadable Model URI Type
+This conforms to the MLflow URI usage for stage and alias specifiers.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mlflow_adsp.contracts.types.reloadable_model_uri_type.ReloadableModelUriType.ALIAS">
+<span class="sig-name descname"><span class="pre">ALIAS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'&#64;'</span></em><a class="headerlink" href="#mlflow_adsp.contracts.types.reloadable_model_uri_type.ReloadableModelUriType.ALIAS" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mlflow_adsp.contracts.types.reloadable_model_uri_type.ReloadableModelUriType.STAGE">
+<span class="sig-name descname"><span class="pre">STAGE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/'</span></em><a class="headerlink" href="#mlflow_adsp.contracts.types.reloadable_model_uri_type.ReloadableModelUriType.STAGE" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="mlflow_adsp.contracts.errors.html" class="btn btn-neutral float-left" title="Errors" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mlflow_adsp.services.html" class="btn btn-neutral float-right" title="Services" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Anaconda, Inc.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

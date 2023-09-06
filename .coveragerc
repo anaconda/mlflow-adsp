@@ -1,0 +1,10 @@
+# .coveragerc to control coverage.py
+[run]
+branch = True
+omit =
+    *test*
+    mlflow_adsp/_version.py
+    mlflow_adsp/bin/mlflow-adsp
+    mlflow_adsp/common/log.py
+    mlflow_adsp/services/worker.py
+    mlflow_adsp/serve.py

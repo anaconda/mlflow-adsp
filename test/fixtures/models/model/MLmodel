@@ -1,0 +1,28 @@
+artifact_path: model
+flavors:
+  python_function:
+    data: model.xgb
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.xgboost
+    python_version: 3.11.4
+  xgboost:
+    code: null
+    data: model.xgb
+    model_class: xgboost.sklearn.XGBRegressor
+    model_format: xgb
+    xgb_version: 1.7.3
+mlflow_version: 2.6.0
+model_uuid: 8bbe203020014324933baa7abf72305e
+run_id: 3e1edaf5d5b64e8dbe0dacc4f25fc3ec
+signature:
+  inputs: '[{"type": "double", "name": "fixed acidity"}, {"type": "double", "name":
+    "volatile acidity"}, {"type": "double", "name": "citric acid"}, {"type": "double",
+    "name": "residual sugar"}, {"type": "double", "name": "chlorides"}, {"type": "double",
+    "name": "free sulfur dioxide"}, {"type": "double", "name": "total sulfur dioxide"},
+    {"type": "double", "name": "density"}, {"type": "double", "name": "pH"}, {"type":
+    "double", "name": "sulphates"}, {"type": "double", "name": "alcohol"}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float32", "shape": [-1]}}]'
+  params: null
+utc_time_created: '2023-08-23 16:58:57.011422'

@@ -1,0 +1,98 @@
+name: mlflow-asdp
+description: MLFlow Plugin For The Anaconda Data Science Platform
+
+commands:
+  #
+  # Development Time Commands
+  #
+
+  clean:
+    env_spec: default
+    unix: |
+      rm -rf .coverage .coverage.* htmlcov coverage.xml build docs/build .pytest_cache test/unit/.pytest_cache mlruns test/fixtures/consumer
+
+  lint:
+    env_spec: default
+    unix: |
+      pylint mlflow_adsp
+      isort --check --diff .
+      black --line-length=120 --target-version=py38 --check --diff .
+
+  lint:fix:
+    env_spec: default
+    unix: |
+      isort .
+      black --line-length=120 --target-version=py38 .
+
+  test:unit:
+    env_spec: default
+    unix: |
+      rm -rf ./test/fixtures/consumer
+      git clone test/fixtures/git_remote test/fixtures/consumer
+      python -m test.unit.setup
+
+  build:apidocs:
+    env_spec: default
+    unix: |
+      sphinx-apidoc -f -o docs/source/mlflow_adsp mlflow_adsp
+
+  build:docs:
+    env_spec: default
+    unix: |
+      rm -rf docs/build
+      cd docs && make clean && make html
+
+channels:
+  - defaults
+  - https://conda.anaconda.org/conda-forge
+  - https://conda.anaconda.org/joshburt
+  - https://conda.anaconda.org/ae5-admin
+
+platforms:
+  - linux-64
+  - osx-64
+  - osx-arm64
+  - win-64
+
+variables:
+  MLFLOW_DISABLE_ENV_MANAGER_CONDA_WARNING: "TRUE"
+
+  # If these are NOT defined as AE User Secrets they MUST be set here.
+  # AE5_HOSTNAME:
+  # AE5_USERNAME:
+  # AE5_PASSWORD:
+
+  # The default per-project number of background jobs the user will leverage during parallel execution.
+  ADSP_WORKER_MAX: 3
+
+env_specs:
+  default:
+    description: Default Environment
+    packages:
+    - defaults:python>=3.11
+    - defaults:mlflow=2.6.0
+    - ae5-admin:ae5-tools<1.0
+    - defaults:psutil
+    - defaults:pydantic<2.0
+    - defaults:click
+    - defaults:requests
+    - defaults:pip
+    - pip:
+        - mlserver
+        - mlserver-mlflow
+
+    # Project Maintenance and Development
+    - defaults:anaconda-project
+    - defaults:isort
+    - defaults:pylint
+    - defaults:black
+    - defaults:jupyter-black
+    - defaults:sphinx
+    - defaults:sphinx-rtd-theme
+    - defaults:myst-parser
+    - defaults:pytest
+    - defaults:pytest-cov
+    - defaults:python-dotenv
+    - defaults:versioneer
+    - defaults:tqdm
+    - defaults:sphinx-click

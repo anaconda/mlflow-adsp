@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-mlflow-asdp-serve-env-configmap
+  labels:
+    app: mlflow-asdp-serve
+data:
+{{- if .Values.mlflow.enabled }}
+  MLFLOW_TRACKING_URI: {{ required "MLflow Tracking URI must be specified" .Values.mlflow.tracking.uri }}
+  MLFLOW_REGISTRY_URI: {{ required "MLflow Registry URI must be specified" .Values.mlflow.registry.uri }}
+{{- if .Values.mlflow.tracking.insecureTls }}
+  MLFLOW_TRACKING_INSECURE_TLS: {{ .Values.mlflow.tracking.insecureTls | quote }}
+{{- end }}
+{{- end }}
+  ENV_MANAGER: {{ required "environment manager must be defined" .Values.model.envManager }}
+  MLFLOW_MODEL_URI: {{ required "MLflow model URI must be defined" .Values.model.uri }}
+  APP_SERVER_HOST: {{ required "bind host must be defined" .Values.endpoint.host }}
+  APP_SERVER_PORT: {{ required "bind port must be defined" .Values.endpoint.port | quote }}
+  APP_SERVER_TRACKING_HEART_BEAT: {{ required "MLflow Tracking Server heart beat must be defined" .Values.endpoint.trackingHeartBeat | quote }}
+  APP_SERVER_MLSERVER: {{ required "MLserver functionality flag must be defined" .Values.endpoint.mlserver  | quote }}
+  APP_SERVER_LOG_LEVEL: {{ required "log level must be defined" .Values.endpoint.logLevel }}
+  MLFLOW_ADSP_SERVE_MAX_TRIES: {{ required "max tries before restart must be defined" .Values.endpoint.adspServeMaxTries | quote }}
+  MLFLOW_ADSP_SERVE_TIMEOUT: {{ required "timeout per try must be defined" .Values.endpoint.adspServeTimeout | quote }}

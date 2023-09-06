@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plugin API Documentation &mdash; MLFlow Plugin For The Anaconda Data Science Platform 0.43.0+0.g454b369.dirty documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Common" href="mlflow_adsp.common.html" />
+    <link rel="prev" title="Command Line Interface" href="../cli.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MLFlow Plugin For The Anaconda Data Science Platform
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation_guide.html">Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow_setup_guide.html">Workflow Setup Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow_usage_and_configuration.html">Workflow Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow_usage_and_configuration.html#configuration-options">Configuration Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../model_serving.html">Model Serving</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../model_serving.html#docker-containerization">Docker Containerization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cli.html">Command Line Interface</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Plugin API Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mlflow_adsp.common.html">Common</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlflow_adsp.contracts.html">Contracts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlflow_adsp.services.html">Services</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#adsp-project-backend">ADSP Project Backend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#serve">Serve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adsp-submitted-run">ADSP Submitted Run</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MLFlow Plugin For The Anaconda Data Science Platform</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Plugin API Documentation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/mlflow_adsp/mlflow_adsp.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="plugin-api-documentation">
+<h1>Plugin API Documentation<a class="headerlink" href="#plugin-api-documentation" title="Permalink to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="mlflow_adsp.common.html">Common</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mlflow_adsp.common.html#module-mlflow_adsp.common.adsp">Anaconda Data Science Platform Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mlflow_adsp.common.html#module-mlflow_adsp.common.log">Logging Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mlflow_adsp.common.html#module-mlflow_adsp.common.process">Process Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mlflow_adsp.common.html#module-mlflow_adsp.common.scheduler">Job Scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mlflow_adsp.common.html#module-mlflow_adsp.common.tracking">MLFlow Tracking Utilities</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mlflow_adsp.contracts.html">Contracts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mlflow_adsp.contracts.dto.html">DTOs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mlflow_adsp.contracts.errors.html">Errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mlflow_adsp.contracts.types.html">Types</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mlflow_adsp.services.html">Services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mlflow_adsp.services.html#module-mlflow_adsp.services.endpoint_manager">Endpoint Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mlflow_adsp.services.html#module-mlflow_adsp.services.worker">Worker</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="adsp-project-backend">
+<h2>ADSP Project Backend<a class="headerlink" href="#adsp-project-backend" title="Permalink to this heading"></a></h2>
+<p>MLFlow Backend Plugin For Anaconda Data Science Platform Definition</p>
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlflow_adsp.backend.</span></span><span class="sig-name descname"><span class="pre">ADSPProjectBackend</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aeSession</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AEUserSession</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractBackend</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<p>Anaconda Data Science Platform Backend
+Sub-classes the MLFlow <cite>AbstractBackend</cite> used for backend management.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ae_session</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">AEUserSession</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">project_uri</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entry_point</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backend_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tracking_uri</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">experiment_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ADSPSubmittedRun</span></span></span></dt>
+<dd><p>The entry point for the execution.  Invoked by mlflow.projects.run when the backend is specified.
+See <a class="reference external" href="https://mlflow.org/docs/2.3.0/python_api/mlflow.projects.html#mlflow.projects.run">https://mlflow.org/docs/2.3.0/python_api/mlflow.projects.html#mlflow.projects.run</a> for
+in-depth details on these parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>project_uri</strong> (<em>str</em>) – URI of project to run.</p></li>
+<li><p><strong>entry_point</strong> (<em>str</em>) – Entry point to run within the project.</p></li>
+<li><p><strong>params</strong> (<em>Dict</em>) – Parameters (dictionary) for the entry point command.</p></li>
+<li><p><strong>version</strong> (<em>str</em>) – For Git-based projects, either a commit hash or a branch name.</p></li>
+<li><p><strong>backend_config</strong> (<em>Union</em><em>[</em><em>Dict</em><em>, </em><em>str</em><em>]</em>) – A dictionary, or a path to a JSON file (must end in ‘.json’), which will be passed as config to the backend.</p></li>
+<li><p><strong>tracking_uri</strong> (<em>str</em>) – The Tracking Server URI.  Within our backend this is controlled through environment variables.
+While passed by the caller it is ignored in this implementation.</p></li>
+<li><p><strong>experiment_id</strong> (<em>str</em>) – The experiment ID for the current execution context.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>submitted_job</strong> – An instance of an <cite>ADSPSubmittedRun</cite> used for tracking and managing the backend run.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ADSPSubmittedRun</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">mlflow_adsp.backend.</span></span><span class="sig-name descname"><span class="pre">adsp_backend_builder</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">AbstractBackend</span></span></span></dt>
+<dd><p>This function will act as our handler for setting up the plugin.</p>
+<p>This function is responsible for:
+1. Creating an Anaconda Data Science Platform Session and Connecting.
+2. Instantiating an Anaconda Data Science Platform Backend with the created session.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>backend</strong> – An instance of the plugin.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>ADSPProjectBackend</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="serve">
+<h2>Serve<a class="headerlink" href="#serve" title="Permalink to this heading"></a></h2>
+<p>Wraps <cite>mlflow serve</cite>. This is not meant to be executed directly, but called through the cli command <cite>mlflow-adsp</cite>.</p>
+</section>
+<section id="adsp-submitted-run">
+<h2>ADSP Submitted Run<a class="headerlink" href="#adsp-submitted-run" title="Permalink to this heading"></a></h2>
+<p>Anaconda Data Science Platform Submitted Run Definition</p>
+<dl class="py class">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlflow_adsp.submitted_run.</span></span><span class="sig-name descname"><span class="pre">ADSPSubmittedRun</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aeSession</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AEUserSession</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mlflowRunId</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adspJobId</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waitInterval</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">15</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">SubmittedRun</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
+<p>Anaconda Data Science Platform Submitted Run
+Sub-classes the MLFlow <cite>SubmittedRun</cite> used for backend management.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ae_session</span></span></dt>
+<dd><p>An Anaconda Data Science Platform session used for communication with the platform.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>AEUserSession</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">mlflow_run_id</span></span></dt>
+<dd><p>The MLFlow Run ID for the current context.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">adsp_job_id</span></span></dt>
+<dd><p>The Anaconda Data Science Platform Job ID</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">response</span></span></dt>
+<dd><p>A dictionary response of the job creation request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">adsp_job_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">ae_session</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">AEUserSession</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">cancel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span></dt>
+<dd><p>Cancels a run’s execution</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">get_log</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span></dt>
+<dd><p>Gets the [current] logs for the job run.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>log</strong> – A string representation of the run output.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">get_status</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">RunStatus</span></span></span></dt>
+<dd><p>Gets the current status of the run.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>status</strong> – Returns an MLFlow run status for the Anaconda Data Science Platform run status.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>RunStatus</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">mlflow_run_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">response</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">run_id</span></span></dt>
+<dd><p><cite>run_id</cite> Property</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>run_id</strong> – The MLFlow Run ID for the context.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">wait</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span></dt>
+<dd><p>Waits for the run to complete then returns the success status.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>success</strong> – Returns True/False based on successful run execution.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">wait_interval</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../cli.html" class="btn btn-neutral float-left" title="Command Line Interface" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mlflow_adsp.common.html" class="btn btn-neutral float-right" title="Common" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Anaconda, Inc.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
