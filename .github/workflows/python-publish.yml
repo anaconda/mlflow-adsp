@@ -49,4 +49,4 @@ jobs:
       env:
         ANACONDA_TOKEN: ${{ secrets.ANACONDA_TOKEN }}
       run: |
-        anaconda --verbose --token $ANACONDA_TOKEN upload --user joshburt build/noarch/mlflow-adsp-*.tar.bz2 --force
+        anaconda --verbose --token $ANACONDA_TOKEN upload --user ae5-admin build/noarch/mlflow-adsp-*.tar.bz2 --force
