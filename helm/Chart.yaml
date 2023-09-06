@@ -1,0 +1,5 @@
+name: mlflow-adsp-serve
+description: mlflow-adsp-serve
+version: 0.0.1
+apiVersion: v1
+home: https://github.com/Anaconda-Platform/mlflow-adsp

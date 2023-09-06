@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Model Serving &mdash; MLFlow Plugin For The Anaconda Data Science Platform 0.43.0+0.g454b369.dirty documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Command Line Interface" href="cli.html" />
+    <link rel="prev" title="Workflow Usage" href="workflow_usage_and_configuration.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            MLFlow Plugin For The Anaconda Data Science Platform
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation_guide.html">Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow_setup_guide.html">Workflow Setup Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow_usage_and_configuration.html">Workflow Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="workflow_usage_and_configuration.html#configuration-options">Configuration Options</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Model Serving</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#runtime">Runtime</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#os-dependencies">OS Dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#python-environment">Python Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#model-artifacts">Model Artifacts</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#deployment">Deployment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#anaconda-data-science-platform">Anaconda Data Science Platform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#kubernetes-docker">Kubernetes / Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#model-serving-scenarios">Model Serving Scenarios</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Anaconda Data Science Platform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Kubernetes / Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#high-level-scenarios">High-Level Scenarios</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#i-local-model-local-dependencies">I - Local Model / Local Dependencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ii-local-model-remote-dependencies">II - Local Model / Remote Dependencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#iii-remote-model-local-dependencies">III - Remote Model / Local Dependencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#iv-remote-model-remote-dependencies">IV - Remote Model / Remote Dependencies</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#anaconda-enterprise">Anaconda Enterprise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#endpoints">Endpoints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#docker-containerization">Docker Containerization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli.html">Command Line Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mlflow_adsp/mlflow_adsp.html">Plugin API Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MLFlow Plugin For The Anaconda Data Science Platform</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Model Serving</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/model_serving.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="model-serving">
+<h1>Model Serving<a class="headerlink" href="#model-serving" title="Permalink to this heading"></a></h1>
+<p>Model Serving refers to exposing ML models as network services (REST APIs) for inference/prediction operations.  Instances of models being served are Endpoints.  Endpoints can be run within ADSP Deployments, or externally within containers or (local contexts).  While almost all requirements can be handled with native <code class="docutils literal notranslate"><span class="pre">mlflow</span> <span class="pre">models</span> <span class="pre">serve</span></code> functionality, if reloading of stage and alias tracked models is required then the mlflow-adsp plugin must be used.</p>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading"></a></h2>
+<section id="runtime">
+<h3>Runtime<a class="headerlink" href="#runtime" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Anaconda Enterprise Project &amp; Command</p>
+<ul>
+<li><p>Model serving can be executed occur within a Project, or through a Deployment using a Project Command.</p></li>
+</ul>
+</li>
+<li><p>Container</p>
+<ul>
+<li><p>Model serving can can be executed within a Docker container.</p></li>
+</ul>
+</li>
+<li><p>Direct</p>
+<ul>
+<li><p>Model serving can run from the command line within local, development, or other scenarios.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="os-dependencies">
+<h3>OS Dependencies<a class="headerlink" href="#os-dependencies" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>This is part of the runtime environment or container definition and includes architecture.</p></li>
+</ul>
+</section>
+<section id="python-environment">
+<h3>Python Environment<a class="headerlink" href="#python-environment" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>The model will be exercised within the context of a Python environment. There are several methods by which this can occur based on the dependency management configuration selected.</p></li>
+</ul>
+</section>
+<section id="model-artifacts">
+<h3>Model Artifacts<a class="headerlink" href="#model-artifacts" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>The physical file assets which are loaded.  MLflow defines a MLmodel format.  See <a class="reference external" href="https://www.mlflow.org/docs/latest/models.html">MLflow Models</a> for details.  This includes Python runtime environment definitions whether or not we leverage them.  If leveraging a MLflow Tracking Server then this would also include the related network access and configurations.</p></li>
+</ul>
+</section>
+</section>
+<section id="deployment">
+<h2>Deployment<a class="headerlink" href="#deployment" title="Permalink to this heading"></a></h2>
+<section id="anaconda-data-science-platform">
+<h3>Anaconda Data Science Platform<a class="headerlink" href="#anaconda-data-science-platform" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>It is recommended to use Anaconda Enterprise’s Project paradigm for dependency management, and resource profiles for compute and hardware configuration.</p></li>
+</ul>
+<p>The CLI can used to invoke the functionally from the Terminal or from a Project Command.  When configured as a Project Command, a Deployment can be created allowing the model to be shared.</p>
+</section>
+<section id="kubernetes-docker">
+<h3>Kubernetes / Docker<a class="headerlink" href="#kubernetes-docker" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>The serving container is expected to be deployed into Kubernetes.</p></li>
+<li><p>A Helm chart will be used to deploy and configure the container.  Either the generic one provided, or the customer can use their own based on specific needs.</p></li>
+<li><p>A container registry to store the build container will be required to store the image.</p></li>
+</ul>
+</section>
+</section>
+<section id="model-serving-scenarios">
+<h2>Model Serving Scenarios<a class="headerlink" href="#model-serving-scenarios" title="Permalink to this heading"></a></h2>
+<section id="id1">
+<h3>Anaconda Data Science Platform<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<p>This can be accomplished with the Anaconda Data Science Platform using Project Deployments. Either native MLflow or the plugin can accomplish this based on needs.</p>
+<ul class="simple">
+<li><p>Using <code class="docutils literal notranslate"><span class="pre">local</span></code> dependency management within MLflow or the plugin will allow the ADSP Project to handle dependencies for the model.</p></li>
+<li><p>Using <code class="docutils literal notranslate"><span class="pre">conda</span></code> or another supported environment manager for the model dependencies is also possible but required additional configuration.</p></li>
+</ul>
+</section>
+<section id="id2">
+<h3>Kubernetes / Docker<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<p>This can be accomplished by containerizing the model runtime and deploying into a Kubernetes cluster.</p>
+</section>
+<section id="high-level-scenarios">
+<h3>High-Level Scenarios<a class="headerlink" href="#high-level-scenarios" title="Permalink to this heading"></a></h3>
+<section id="i-local-model-local-dependencies">
+<h4>I - Local Model / Local Dependencies<a class="headerlink" href="#i-local-model-local-dependencies" title="Permalink to this heading"></a></h4>
+<p><img alt="Scenario 1" src="_images/scenario-1.png" /></p>
+<ul class="simple">
+<li><p>Supports Reloadable Models: No</p></li>
+</ul>
+<section id="description">
+<h5>Description<a class="headerlink" href="#description" title="Permalink to this heading"></a></h5>
+<ul class="simple">
+<li><p>Endpoint contains the complete runtime (OS, Dependencies, Model).</p>
+<ul>
+<li><p>Leveraging persistent environments with the Anaconda Data Science Platform allows for deployments to start up with all dependencies needed and load the model stored with the Project.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="ii-local-model-remote-dependencies">
+<h4>II - Local Model / Remote Dependencies<a class="headerlink" href="#ii-local-model-remote-dependencies" title="Permalink to this heading"></a></h4>
+<p><img alt="Scenario 2" src="_images/scenario-2.png" /></p>
+<ul class="simple">
+<li><p>Supports Reloadable Models : No</p></li>
+</ul>
+<section id="id3">
+<h5>Description<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h5>
+<p>Endpoint contains the model, but the dependencies must be resolved and installed at runtime from an external provider.</p>
+<p>In this context, the external provider here could be repositories within the Anaconda Data Science Platform, or external sources (based on configuration).</p>
+<ul class="simple">
+<li><p>If a persistent environment is not configured for this Project within the Anaconda Data Science Platform then they will be resolved when the Deployment starts.</p></li>
+</ul>
+</section>
+</section>
+<section id="iii-remote-model-local-dependencies">
+<h4>III - Remote Model / Local Dependencies<a class="headerlink" href="#iii-remote-model-local-dependencies" title="Permalink to this heading"></a></h4>
+<p><img alt="Scenario 3" src="_images/scenario-3.png" /></p>
+<ul>
+<li><p>Supports Reloadable Models: Yes**</p>
+<p>** So long as the runtime dependencies do NOT need to change, this scenario can be used to manage reloadable models.</p>
+<p>** Requires the use of MLflow managed environment dependencies.</p>
+</li>
+</ul>
+<section id="id4">
+<h5>Description<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h5>
+<p>Endpoint sources the model from an external source, but the dependencies to execute the model are already present in the runtime environment. In this context ADSP is providing access to the MLflow Tracking Server and the dependencies.</p>
+<p>Leveraging persistent environments with the Anaconda Data Science Platform allows for deployments to start up with all dependencies needed and load the model tracking within the MLflow Tracking Server.</p>
+<ul class="simple">
+<li><p>Fast and reliable runtime setup and fairly robust support for model updates which don’t need dependencies changed.</p></li>
+</ul>
+</section>
+</section>
+<section id="iv-remote-model-remote-dependencies">
+<h4>IV - Remote Model / Remote Dependencies<a class="headerlink" href="#iv-remote-model-remote-dependencies" title="Permalink to this heading"></a></h4>
+<p><img alt="Scenario 4" src="_images/scenario-4.png" /></p>
+<ul>
+<li><p>Supports Reloadable Models: Yes**</p>
+<p>** Requires the use of MLflow managed environment dependencies.</p>
+</li>
+</ul>
+<section id="id5">
+<h5>Description<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h5>
+<p>Endpoint sources the model and dependencies at runtime.</p>
+<ul class="simple">
+<li><p>Fully dynamic runtime.  Both the environment and the model are brought together at runtime.  The flexibility comes with the cost of the environment resolution and installation.</p></li>
+</ul>
+</section>
+</section>
+</section>
+</section>
+<section id="anaconda-enterprise">
+<h2>Anaconda Enterprise<a class="headerlink" href="#anaconda-enterprise" title="Permalink to this heading"></a></h2>
+<p>The Anaconda Data Science Platform is providing access to dependencies, a hosted MLflow Tracking Server instance, and compute when using Project Deployments.dx</p>
+<p>Models can be loaded from any supported URI, which is a superset of choices including tracking servers.  See <a class="reference external" href="https://www.mlflow.org/docs/latest/python_api/mlflow.sklearn.html#mlflow.sklearn.load_model">mlflow.sklearn — MLflow Documentation</a> and <a class="reference external" href="https://www.mlflow.org/docs/latest/concepts.html#artifact-locations">Concepts — MLflow Documentation</a> for additional details.</p>
+</section>
+<section id="endpoints">
+<h2>Endpoints<a class="headerlink" href="#endpoints" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>When running an endpoint using the plugin the the native mlflow serve is leveraged for the following tasks:</p>
+<ol class="arabic simple">
+<li><p>Source the model from the provided URI.</p></li>
+<li><p>Resolving runtime dependencies if configured to do so.</p></li>
+<li><p>Exposing the model as a REST API.</p></li>
+</ol>
+</li>
+<li><p>Native MLflow serving does not provide a mechanism to reload a model if the version changed for Stage and Alias tracked models.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mlflow-adsp</span> <span class="pre">serve</span></code> provides a mechanism to manage the <code class="docutils literal notranslate"><span class="pre">mlflow</span> <span class="pre">serve</span></code> process and allow monitoring for version changes when leveraging a reloadable model URI.</p></li>
+</ul>
+<p>Endpoint consumption details:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.mlflow.org/docs/latest/models.html#id68">MLflow Models — MLflow Documentation</a></p></li>
+</ul>
+</section>
+</section>
+<section id="docker-containerization">
+<h1>Docker Containerization<a class="headerlink" href="#docker-containerization" title="Permalink to this heading"></a></h1>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>These two solutions require the use of a docker daemon to complete builds.</p></th>
+</tr>
+</thead>
+</table>
+<p>These two solutions require the use of a docker daemon to complete builds.  Building natively within ADSP is not currently supported and remote access to a docker host would be required in order to leverage these solutions.</p>
+<p>There are several methods to create Docker images for use outside of the Anaconda Data Science Platform.  In addition to the ones below custom images can be also be leveraged.</p>
+<ol class="arabic simple">
+<li><p>anaconda-project dockerize</p>
+<ol class="arabic simple">
+<li><p>Reference: <a class="reference external" href="https://anaconda-project.readthedocs.io/en/latest/user-guide/tasks/docker-image.html">Creating Docker Images — Anaconda Project Documentation</a></p></li>
+</ol>
+</li>
+</ol>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Pros</p></th>
+<th class="head"><p>Cons</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Anaconda Enterprise (anaconda-project) Project Deployments can be directly converted into Docker images.</p></td>
+<td><p>Roadblock: Anaconda Enterprise user space does not have Docker, or container registry options</p></td>
+</tr>
+<tr class="row-odd"><td><p>Endpoint has all runtime dependencies.</p></td>
+<td><p>Requires docker daemon</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Requires a container registry to push to.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Access to the custom docker registry will be required at all deployment locations.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>The model will need to be manually downloaded by the user and included.</p></td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li><p>mllfow models build-docker / generate-dockerfile</p>
+<ol class="arabic simple">
+<li><p>References:</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://www.mlflow.org/docs/latest/cli.html?highlight=dockerfile#mlflow-models-build-docker">mlflow-models-build-docker</a></p></li>
+<li><p><a class="reference external" href="https://www.mlflow.org/docs/latest/cli.html?highlight=dockerfile#mlflow-models-generate-dockerfile">mlflow-models-generate-dockerfile</a></p></li>
+</ol>
+</li>
+<li><p>MLflow CLI provides the ability to create a docker file based on the model, or provide a Dockerfile which would be used to build the image.</p></li>
+</ol>
+</li>
+</ol>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Pros</p></th>
+<th class="head"><p>Cons</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Endpoint has all runtime dependencies.</p></td>
+<td><p>Roadblock: Anaconda Enterprise user space does not have Docker, or container registry options</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Requires docker daemon</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Requires a container registry to push to</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Access to the custom docker registry will be required at all deployment locations</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>This solution does not require a Docker Daemon</p></th>
+</tr>
+</thead>
+</table>
+<ol class="arabic simple" start="3">
+<li><p>mlfow-adsp template container &amp; CI/CD</p>
+<ol class="arabic simple">
+<li><p>The plugin provides a template Dockerfile which can be used to build images which serve models.</p></li>
+</ol>
+</li>
+</ol>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Pros</p></th>
+<th class="head"><p>Cons</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Does not require Docker.  A generic image can be generated and provided</p></td>
+<td><p>Only supports a remote model / remote dependency deployment scenario</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Access to the custom docker registry will be required at all deployment locations</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Access to MLFlow Tracking will be required at all deployment locations</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="workflow_usage_and_configuration.html" class="btn btn-neutral float-left" title="Workflow Usage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="cli.html" class="btn btn-neutral float-right" title="Command Line Interface" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Anaconda, Inc.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

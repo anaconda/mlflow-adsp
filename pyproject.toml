@@ -1,0 +1,25 @@
+[tool.black]
+line-length = 120
+target-version = ['py38']
+
+
+[tool.isort]
+line_length = 120
+profile = 'black'
+src_paths = ["mlflow_adsp","test"]
+known_first_party = ["anaconda", "mlflow_adsp", "ae5_tools"]
+skip = ["envs"]
+
+
+[tool.versioneer]
+VCS = "git"
+style = "pep440"
+versionfile_source = "mlflow_adsp/_version.py"
+versionfile_build = "mlflow_adsp/_version.py"
+tag_prefix = ""
+parentdir_prefix = "mlflow_adsp-"
+
+
+[build-system]
+requires = ["setuptools", "versioneer[toml]==0.26"]
+build-backend = "setuptools.build_meta"

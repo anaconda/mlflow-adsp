@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Common &mdash; MLFlow Plugin For The Anaconda Data Science Platform 0.43.0+0.g454b369.dirty documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Contracts" href="mlflow_adsp.contracts.html" />
+    <link rel="prev" title="Plugin API Documentation" href="mlflow_adsp.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MLFlow Plugin For The Anaconda Data Science Platform
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation_guide.html">Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow_setup_guide.html">Workflow Setup Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow_usage_and_configuration.html">Workflow Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow_usage_and_configuration.html#configuration-options">Configuration Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../model_serving.html">Model Serving</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../model_serving.html#docker-containerization">Docker Containerization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cli.html">Command Line Interface</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="mlflow_adsp.html">Plugin API Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="mlflow_adsp.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Common</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#module-mlflow_adsp.common.adsp">Anaconda Data Science Platform Utilities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-mlflow_adsp.common.log">Logging Utilities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-mlflow_adsp.common.process">Process Utilities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-mlflow_adsp.common.scheduler">Job Scheduler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-mlflow_adsp.common.tracking">MLFlow Tracking Utilities</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="mlflow_adsp.contracts.html">Contracts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mlflow_adsp.services.html">Services</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="mlflow_adsp.html#adsp-project-backend">ADSP Project Backend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mlflow_adsp.html#serve">Serve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mlflow_adsp.html#adsp-submitted-run">ADSP Submitted Run</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MLFlow Plugin For The Anaconda Data Science Platform</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="mlflow_adsp.html">Plugin API Documentation</a></li>
+      <li class="breadcrumb-item active">Common</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/mlflow_adsp/mlflow_adsp.common.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="common">
+<h1>Common<a class="headerlink" href="#common" title="Permalink to this heading"></a></h1>
+<section id="module-mlflow_adsp.common.adsp">
+<span id="anaconda-data-science-platform-utilities"></span><h2>Anaconda Data Science Platform Utilities<a class="headerlink" href="#module-mlflow_adsp.common.adsp" title="Permalink to this heading"></a></h2>
+<p>Authentication / Authorization Helper Functions</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="mlflow_adsp.common.adsp.create_session">
+<span class="sig-prename descclassname"><span class="pre">mlflow_adsp.common.adsp.</span></span><span class="sig-name descname"><span class="pre">create_session</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">AEUserSession</span></span></span><a class="headerlink" href="#mlflow_adsp.common.adsp.create_session" title="Permalink to this definition"></a></dt>
+<dd><p>This function is responsible for pulling Anaconda Data Science Platform credentials out
+of the environment definition and creating an instance of a session.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>session</strong> – An instance of an Anaconda Data Science Platform user session.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>AEUserSession</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mlflow_adsp.common.adsp.get_project_id">
+<span class="sig-prename descclassname"><span class="pre">mlflow_adsp.common.adsp.</span></span><span class="sig-name descname"><span class="pre">get_project_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#mlflow_adsp.common.adsp.get_project_id" title="Permalink to this definition"></a></dt>
+<dd><p>Inspected the run-time environment for the project Id.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>project_id</strong> – The project ID for the Anaconda Data Science Platform project which owns the runtime context.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-mlflow_adsp.common.log">
+<span id="logging-utilities"></span><h2>Logging Utilities<a class="headerlink" href="#module-mlflow_adsp.common.log" title="Permalink to this heading"></a></h2>
+<p>This module contains logging functions.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="mlflow_adsp.common.log.set_log_level">
+<span class="sig-prename descclassname"><span class="pre">mlflow_adsp.common.log.</span></span><span class="sig-name descname"><span class="pre">set_log_level</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="mlflow_adsp.contracts.types.html#mlflow_adsp.contracts.types.log_level.LogLevel" title="mlflow_adsp.contracts.types.log_level.LogLevel"><span class="pre">LogLevel</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlflow_adsp.common.log.set_log_level" title="Permalink to this definition"></a></dt>
+<dd><p>Sets log level.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>level</strong> (<em>str</em>) – A string name for a log level to set.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-mlflow_adsp.common.process">
+<span id="process-utilities"></span><h2>Process Utilities<a class="headerlink" href="#module-mlflow_adsp.common.process" title="Permalink to this heading"></a></h2>
+<p>Process Handling Code</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="mlflow_adsp.common.process.process_launch_wait">
+<span class="sig-prename descclassname"><span class="pre">mlflow_adsp.common.process.</span></span><span class="sig-name descname"><span class="pre">process_launch_wait</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cwd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shell_out_cmd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlflow_adsp.common.process.process_launch_wait" title="Permalink to this definition"></a></dt>
+<dd><p>Internal function for wrapping process launches [and waiting].</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>shell_out_cmd</strong> (<em>str</em>) – The command to be executed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-mlflow_adsp.common.scheduler">
+<span id="job-scheduler"></span><h2>Job Scheduler<a class="headerlink" href="#module-mlflow_adsp.common.scheduler" title="Permalink to this heading"></a></h2>
+<p>Scheduler for MLFlow Workflow Steps On ADSP</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="mlflow_adsp.common.scheduler.Scheduler">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlflow_adsp.common.scheduler.</span></span><span class="sig-name descname"><span class="pre">Scheduler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">failed_execution_retry_max</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_workers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlflow_adsp.common.scheduler.Scheduler" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The Scheduler handles launching MLFlow workflow steps within ADSP.</p>
+<p>With built-in job limiting and retries the class provides an easy method
+for submitting serial or parallel workflow steps for processing within ADSP.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mlflow_adsp.common.scheduler.Scheduler.jobs">
+<span class="sig-name descname"><span class="pre">jobs</span></span><a class="headerlink" href="#mlflow_adsp.common.scheduler.Scheduler.jobs" title="Permalink to this definition"></a></dt>
+<dd><p>The List of jobs the user requested for processing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[Job]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mlflow_adsp.common.scheduler.Scheduler.todo">
+<span class="sig-name descname"><span class="pre">todo</span></span><a class="headerlink" href="#mlflow_adsp.common.scheduler.Scheduler.todo" title="Permalink to this definition"></a></dt>
+<dd><p>The jobs marked as TODO but that are not yet under execution.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mlflow_adsp.common.scheduler.Scheduler.inprogress">
+<span class="sig-name descname"><span class="pre">inprogress</span></span><a class="headerlink" href="#mlflow_adsp.common.scheduler.Scheduler.inprogress" title="Permalink to this definition"></a></dt>
+<dd><p>Jobs which have started put are not yet finished.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mlflow_adsp.common.scheduler.Scheduler.complete">
+<span class="sig-name descname"><span class="pre">complete</span></span><a class="headerlink" href="#mlflow_adsp.common.scheduler.Scheduler.complete" title="Permalink to this definition"></a></dt>
+<dd><p>Jobs which have completed (successfully or not).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mlflow_adsp.common.scheduler.Scheduler.max_workers">
+<span class="sig-name descname"><span class="pre">max_workers</span></span><a class="headerlink" href="#mlflow_adsp.common.scheduler.Scheduler.max_workers" title="Permalink to this definition"></a></dt>
+<dd><p>The maximum number of parallel jobs to execute in parallel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="mlflow_adsp.common.scheduler.Scheduler.failed_execution_retry_max">
+<span class="sig-name descname"><span class="pre">failed_execution_retry_max</span></span><a class="headerlink" href="#mlflow_adsp.common.scheduler.Scheduler.failed_execution_retry_max" title="Permalink to this definition"></a></dt>
+<dd><p>The maximum number of retries for a job that failed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id0">
+<span class="sig-name descname"><span class="pre">complete</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id0" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlflow_adsp.common.scheduler.Scheduler.execute_step">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">execute_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Step</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ADSPSubmittedRun</span></span></span><a class="headerlink" href="#mlflow_adsp.common.scheduler.Scheduler.execute_step" title="Permalink to this definition"></a></dt>
+<dd><p>Execute a MLFlow Workflow Step</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>step</strong> (<em>Step</em>) – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>submitted_job</strong> – An instance of <cite>SubmittedRun</cite> for the requested workflow step run.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ADSPSubmittedRun</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id1">
+<span class="sig-name descname"><span class="pre">failed_execution_retry_max</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#id1" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id2">
+<span class="sig-name descname"><span class="pre">inprogress</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id2" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id3">
+<span class="sig-name descname"><span class="pre">jobs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Job</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id3" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id4">
+<span class="sig-name descname"><span class="pre">max_workers</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#id4" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="mlflow_adsp.common.scheduler.Scheduler.process_work_queue">
+<span class="sig-name descname"><span class="pre">process_work_queue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">steps</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Step</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interval</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exponent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retry_max</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">disable_progress_bar</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Job</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#mlflow_adsp.common.scheduler.Scheduler.process_work_queue" title="Permalink to this definition"></a></dt>
+<dd><p>Processing a list of execution requests.
+If the jobs are async the processing will occur in parallel, serial execution is used otherwise.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>steps</strong> (<em>List</em><em>[</em><em>Step</em><em>]</em>) – The list of execution requests to process.</p></li>
+<li><p><strong>interval</strong> (<em>float</em>) – The wait internal to use during exponential backoff</p></li>
+<li><p><strong>exponent</strong> (<em>float</em>) – The exponent used for calculated exponential backoff</p></li>
+<li><p><strong>retry_max</strong> (<em>int = 3</em>) – The maximum number of retries for a job that failed.</p></li>
+<li><p><strong>disable_progress_bar</strong> (<em>bool = False</em>) – Controls the display of the progress bar.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>runs</strong> – A list of results from the work queue.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[Job]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="id5">
+<span class="sig-name descname"><span class="pre">todo</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#id5" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-mlflow_adsp.common.tracking">
+<span id="mlflow-tracking-utilities"></span><h2>MLFlow Tracking Utilities<a class="headerlink" href="#module-mlflow_adsp.common.tracking" title="Permalink to this heading"></a></h2>
+<p>MLFlow Tracking Server Helpers</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="mlflow_adsp.common.tracking.create_unique_name">
+<span class="sig-prename descclassname"><span class="pre">mlflow_adsp.common.tracking.</span></span><span class="sig-name descname"><span class="pre">create_unique_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#mlflow_adsp.common.tracking.create_unique_name" title="Permalink to this definition"></a></dt>
+<dd><p>Given a name will generate unique suffix and return the updated name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The original run name.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>run_name</strong> – Returns the run name with a unique suffix.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mlflow_adsp.common.tracking.upsert_experiment">
+<span class="sig-prename descclassname"><span class="pre">mlflow_adsp.common.tracking.</span></span><span class="sig-name descname"><span class="pre">upsert_experiment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#mlflow_adsp.common.tracking.upsert_experiment" title="Permalink to this definition"></a></dt>
+<dd><p>This function returns the experiment id for the provided experiment name.
+If the experiment does not exist, it is created.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – The experiment name.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>experiment_id</strong> – The experiment ID.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="mlflow_adsp.html" class="btn btn-neutral float-left" title="Plugin API Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mlflow_adsp.contracts.html" class="btn btn-neutral float-right" title="Contracts" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Anaconda, Inc.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

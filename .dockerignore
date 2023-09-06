@@ -1,0 +1,8 @@
+.idea/
+envs/
+*.pyc
+*.pyd
+*.pyo
+**/__pycache__
+*$py.class
+build/
