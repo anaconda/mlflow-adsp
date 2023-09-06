@@ -1,14 +1,13 @@
 channels:
   - defaults
   - https://conda.anaconda.org/conda-forge
-  - https://conda.anaconda.org/joshburt
   - https://conda.anaconda.org/ae5-admin
 
 dependencies:
   - defaults:python=3.11
   - defaults:mlflow=2.6.0
   - ae5-admin:ae5-tools<1.0
-  - joshburt:mlflow-adsp<1.0
+  - ae5-admin:mlflow-adsp>=0.5,<1.0
   - defaults:tqdm
   - defaults:psutil
   - defaults:pydantic<2.0

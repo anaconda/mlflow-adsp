@@ -32,7 +32,7 @@ requirements:
     - requests
 
 about:
-  home: https://github.com/shapeandshare/mlflow-adsp
+  home: https://github.com/Anaconda-Platform/mlflow-adsp
   summary: "MLFlow Plugin For The Anaconda Data Science Platform"
   license: Apache-2.0
   license_file: LICENSE
