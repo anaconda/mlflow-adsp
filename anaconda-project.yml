@@ -45,7 +45,6 @@ commands:
 channels:
   - defaults
   - https://conda.anaconda.org/conda-forge
-  - https://conda.anaconda.org/joshburt
   - https://conda.anaconda.org/ae5-admin
 
 platforms:
