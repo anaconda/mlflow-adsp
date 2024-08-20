@@ -89,6 +89,10 @@ env_specs:
 
     # Project Maintenance and Development
     - defaults:anaconda-project
+    - defaults:conda-build
+    - defaults:conda-verify
+    - defaults:setuptools
+    - defaults:anaconda-client
     - defaults:isort
     - defaults:pylint
     - defaults:black
