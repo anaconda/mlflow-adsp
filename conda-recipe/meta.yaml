@@ -25,9 +25,9 @@ requirements:
     - python>=3.8
     - mlflow>=2.3.0
     - tqdm
-    - ae5-tools>=0.6.1
+    - ae5-tools>=0.7,<1.0
     - psutil
-    - pydantic<2.0
+    - pydantic>=2.0,<3
     - click
     - requests
 

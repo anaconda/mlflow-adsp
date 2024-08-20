@@ -68,11 +68,11 @@ env_specs:
   default:
     description: Default Environment
     packages:
-    - defaults:python>=3.11
-    - defaults:mlflow=2.6.0
-    - ae5-admin:ae5-tools<1.0
+    - defaults:python>=3.12,<3.13
+    - defaults:mlflow>=2.15.1
+    - ae5-admin:ae5-tools>=0.7,<1.0
     - defaults:psutil
-    - defaults:pydantic<2.0
+    - defaults:pydantic>=2.0,<3
     - defaults:click
     - defaults:requests
     - defaults:pip
