@@ -42,7 +42,8 @@ jobs:
         anaconda-project run coverage xml
     - name: Build Conda Package
       run: |
-        anaconda-project run build
+        mkdir build
+        conda build conda-recipe --no-anaconda-upload --no-test --output-folder build
     - name: Publish Conda Package
       env:
         ANACONDA_TOKEN: ${{ secrets.ANACONDA_TOKEN }}

@@ -31,13 +31,6 @@ commands:
       git clone test/fixtures/git_remote test/fixtures/consumer
       python -m test.unit.setup
 
-  build:
-    env_spec: default
-    unix: |
-      anaconda-project run clean
-      mkdir build
-      conda build conda-recipe --no-anaconda-upload --no-test --output-folder build
-
   build:apidocs:
     env_spec: default
     unix: |
@@ -89,10 +82,6 @@ env_specs:
 
     # Project Maintenance and Development
     - defaults:anaconda-project
-    - defaults:conda-build
-    - defaults:conda-verify
-    - defaults:setuptools
-    - defaults:anaconda-client
     - defaults:isort
     - defaults:pylint
     - defaults:black
