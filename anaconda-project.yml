@@ -31,6 +31,13 @@ commands:
       git clone test/fixtures/git_remote test/fixtures/consumer
       python -m test.unit.setup
 
+  build:
+    env_spec: default
+    unix: |
+      anaconda-project run clean
+      mkdir build
+      conda build conda-recipe --no-anaconda-upload --no-test --output-folder build
+
   build:apidocs:
     env_spec: default
     unix: |
@@ -69,7 +76,7 @@ env_specs:
     description: Default Environment
     packages:
     - defaults:python>=3.12,<3.13
-    - defaults:mlflow>=2.15.1
+    - defaults:mlflow>=2.12
     - ae5-admin:ae5-tools>=0.7,<1.0
     - defaults:psutil
     - defaults:pydantic>=2.0,<3

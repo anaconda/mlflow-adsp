@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Command Line Interface &mdash; MLFlow Plugin For The Anaconda Data Science Platform 0.43.0+0.g454b369.dirty documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <title>Command Line Interface &mdash; MLFlow Plugin For The Anaconda Data Science Platform 0.50.1+1.gd59aa8e.dirty documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=cbfd51ab"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -88,20 +90,20 @@
            <div itemprop="articleBody">
              
   <section id="command-line-interface">
-<h1>Command Line Interface<a class="headerlink" href="#command-line-interface" title="Permalink to this heading"></a></h1>
+<h1>Command Line Interface<a class="headerlink" href="#command-line-interface" title="Link to this heading"></a></h1>
 <section id="commands">
-<h2>Commands<a class="headerlink" href="#commands" title="Permalink to this heading"></a></h2>
+<h2>Commands<a class="headerlink" href="#commands" title="Link to this heading"></a></h2>
 <section id="mlflow-adsp">
-<h3>mlflow-adsp<a class="headerlink" href="#mlflow-adsp" title="Permalink to this heading"></a></h3>
+<h3>mlflow-adsp<a class="headerlink" href="#mlflow-adsp" title="Link to this heading"></a></h3>
 <p>The click entry point group for the <cite>mlflow-adsp</cite> command.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mlflow-adsp<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>COMMAND<span class="w"> </span><span class="o">[</span>ARGS<span class="o">]</span>...
 </pre></div>
 </div>
 <section id="mlflow-adsp-serve">
-<h4>serve<a class="headerlink" href="#mlflow-adsp-serve" title="Permalink to this heading"></a></h4>
+<h4>serve<a class="headerlink" href="#mlflow-adsp-serve" title="Link to this heading"></a></h4>
 <p>Wraps <cite>MLflow serve</cite> allowing for reloading of models defined with stages or aliases.</p>
 <section id="attributes">
-<h5>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading"></a></h5>
+<h5>Attributes<a class="headerlink" href="#attributes" title="Link to this heading"></a></h5>
 <dl class="simple">
 <dt>env_manager: Optional[str]</dt><dd><p>The environment manager to use, (conda, pip, local) that is supported by MLflow.
 Local is the default and is recommended when running within the Anaconda Data Science Platform.</p>
@@ -131,43 +133,43 @@ health before giving up.</p>
 <p class="rubric">Options</p>
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-mlflow-adsp-serve-env-manager">
-<span class="sig-name descname"><span class="pre">--env-manager</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;env_manager&gt;</span></span><a class="headerlink" href="#cmdoption-mlflow-adsp-serve-env-manager" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">--env-manager</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;env_manager&gt;</span></span><a class="headerlink" href="#cmdoption-mlflow-adsp-serve-env-manager" title="Link to this definition"></a></dt>
 <dd><p>The environment manager to use, (conda, pip, local) what is supported by MLflow. Local is the default and is recommended when running within the Anaconda Data Science Platform.</p>
 </dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-mlflow-adsp-serve-host">
-<span class="sig-name descname"><span class="pre">--host</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;host&gt;</span></span><a class="headerlink" href="#cmdoption-mlflow-adsp-serve-host" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">--host</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;host&gt;</span></span><a class="headerlink" href="#cmdoption-mlflow-adsp-serve-host" title="Link to this definition"></a></dt>
 <dd><p>Host to bind to when running.</p>
 </dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-mlflow-adsp-serve-port">
-<span class="sig-name descname"><span class="pre">--port</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;port&gt;</span></span><a class="headerlink" href="#cmdoption-mlflow-adsp-serve-port" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">--port</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;port&gt;</span></span><a class="headerlink" href="#cmdoption-mlflow-adsp-serve-port" title="Link to this definition"></a></dt>
 <dd><p>Port to bind to when running.</p>
 </dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-mlflow-adsp-serve-model-uri">
-<span class="sig-name descname"><span class="pre">--model-uri</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;model_uri&gt;</span></span><a class="headerlink" href="#cmdoption-mlflow-adsp-serve-model-uri" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">--model-uri</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;model_uri&gt;</span></span><a class="headerlink" href="#cmdoption-mlflow-adsp-serve-model-uri" title="Link to this definition"></a></dt>
 <dd><p>The MLflow compliant model URI to load. Only models defined in a stage or an alias can be dynamic reloaded. All other types will run without updating.</p>
 </dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-mlflow-adsp-serve-heart-beat">
-<span class="sig-name descname"><span class="pre">--heart-beat</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;heart_beat&gt;</span></span><a class="headerlink" href="#cmdoption-mlflow-adsp-serve-heart-beat" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">--heart-beat</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;heart_beat&gt;</span></span><a class="headerlink" href="#cmdoption-mlflow-adsp-serve-heart-beat" title="Link to this definition"></a></dt>
 <dd><p>The internal to poll the MLflow Tracking Server for model updates when running a reloadable model type.</p>
 </dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-mlflow-adsp-serve-enable-mlserver">
-<span class="sig-name descname"><span class="pre">--enable-mlserver</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;enable_mlserver&gt;</span></span><a class="headerlink" href="#cmdoption-mlflow-adsp-serve-enable-mlserver" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">--enable-mlserver</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;enable_mlserver&gt;</span></span><a class="headerlink" href="#cmdoption-mlflow-adsp-serve-enable-mlserver" title="Link to this definition"></a></dt>
 <dd><p>Flag for mlserver functionality.</p>
 </dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-mlflow-adsp-serve-log-level">
-<span class="sig-name descname"><span class="pre">--log-level</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;log_level&gt;</span></span><a class="headerlink" href="#cmdoption-mlflow-adsp-serve-log-level" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">--log-level</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;log_level&gt;</span></span><a class="headerlink" href="#cmdoption-mlflow-adsp-serve-log-level" title="Link to this definition"></a></dt>
 <dd><p>Log level.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Options<span class="colon">:</span></dt>
@@ -179,7 +181,7 @@ health before giving up.</p>
 </section>
 </section>
 <section id="mlflow-adsp-worker">
-<h4>worker<a class="headerlink" href="#mlflow-adsp-worker" title="Permalink to this heading"></a></h4>
+<h4>worker<a class="headerlink" href="#mlflow-adsp-worker" title="Link to this heading"></a></h4>
 <p>Pulls the run-time command out of the environment variable declared during job creation, then launches it.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mlflow-adsp<span class="w"> </span>worker<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
 </pre></div>
@@ -187,7 +189,7 @@ health before giving up.</p>
 <p class="rubric">Options</p>
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-mlflow-adsp-worker-log-level">
-<span class="sig-name descname"><span class="pre">--log-level</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;log_level&gt;</span></span><a class="headerlink" href="#cmdoption-mlflow-adsp-worker-log-level" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">--log-level</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;log_level&gt;</span></span><a class="headerlink" href="#cmdoption-mlflow-adsp-worker-log-level" title="Link to this definition"></a></dt>
 <dd><p>Log level.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Options<span class="colon">:</span></dt>

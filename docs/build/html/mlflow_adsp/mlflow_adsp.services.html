@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services &mdash; MLFlow Plugin For The Anaconda Data Science Platform 0.43.0+0.g454b369.dirty documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <title>Services &mdash; MLFlow Plugin For The Anaconda Data Science Platform 0.50.1+1.gd59aa8e.dirty documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=92fd9be5" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=cbfd51ab"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -93,18 +95,18 @@
            <div itemprop="articleBody">
              
   <section id="services">
-<h1>Services<a class="headerlink" href="#services" title="Permalink to this heading"></a></h1>
+<h1>Services<a class="headerlink" href="#services" title="Link to this heading"></a></h1>
 <section id="module-mlflow_adsp.services.endpoint_manager">
-<span id="endpoint-manager"></span><h2>Endpoint Manager<a class="headerlink" href="#module-mlflow_adsp.services.endpoint_manager" title="Permalink to this heading"></a></h2>
+<span id="endpoint-manager"></span><h2>Endpoint Manager<a class="headerlink" href="#module-mlflow_adsp.services.endpoint_manager" title="Link to this heading"></a></h2>
 <p>This module holds the Endpoint Manager definition used for wrapping <cite>mlflow serve</cite> calls for stages.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="mlflow_adsp.services.endpoint_manager.EndpointManager">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlflow_adsp.services.endpoint_manager.</span></span><span class="sig-name descname"><span class="pre">EndpointManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">MlflowClient</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">EndpointManagerParameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlflow_adsp.services.endpoint_manager.EndpointManager" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mlflow_adsp.services.endpoint_manager.</span></span><span class="sig-name descname"><span class="pre">EndpointManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">MlflowClient</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">EndpointManagerParameters</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mlflow_adsp.services.endpoint_manager.EndpointManager" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>The EndpointManager handles wrapping <cite>mlflow serve</cite> and monitoring changes to the designation model version.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mlflow_adsp.services.endpoint_manager.EndpointManager.client">
-<span class="sig-name descname"><span class="pre">client</span></span><a class="headerlink" href="#mlflow_adsp.services.endpoint_manager.EndpointManager.client" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">client</span></span><a class="headerlink" href="#mlflow_adsp.services.endpoint_manager.EndpointManager.client" title="Link to this definition"></a></dt>
 <dd><p>MLflow client</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -115,7 +117,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mlflow_adsp.services.endpoint_manager.EndpointManager.params">
-<span class="sig-name descname"><span class="pre">params</span></span><a class="headerlink" href="#mlflow_adsp.services.endpoint_manager.EndpointManager.params" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">params</span></span><a class="headerlink" href="#mlflow_adsp.services.endpoint_manager.EndpointManager.params" title="Link to this definition"></a></dt>
 <dd><p>Endpoint manager parameters</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -126,7 +128,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mlflow_adsp.services.endpoint_manager.EndpointManager.metadata">
-<span class="sig-name descname"><span class="pre">metadata</span></span><a class="headerlink" href="#mlflow_adsp.services.endpoint_manager.EndpointManager.metadata" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">metadata</span></span><a class="headerlink" href="#mlflow_adsp.services.endpoint_manager.EndpointManager.metadata" title="Link to this definition"></a></dt>
 <dd><p>The calculated metadata about the model</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -137,7 +139,7 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mlflow_adsp.services.endpoint_manager.EndpointManager.version">
-<span class="sig-name descname"><span class="pre">version</span></span><a class="headerlink" href="#mlflow_adsp.services.endpoint_manager.EndpointManager.version" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">version</span></span><a class="headerlink" href="#mlflow_adsp.services.endpoint_manager.EndpointManager.version" title="Link to this definition"></a></dt>
 <dd><p>The current (known) model version if reloadable.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
@@ -148,12 +150,12 @@
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="mlflow_adsp.services.endpoint_manager.EndpointManager.SUBPROCESSES">
-<span class="sig-name descname"><span class="pre">SUBPROCESSES</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">subprocess.Popen</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#mlflow_adsp.services.endpoint_manager.EndpointManager.SUBPROCESSES" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">SUBPROCESSES</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">Popen</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#mlflow_adsp.services.endpoint_manager.EndpointManager.SUBPROCESSES" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlflow_adsp.services.endpoint_manager.EndpointManager.serve">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">serve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">EndpointManagerParameters</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlflow_adsp.services.endpoint_manager.EndpointManager.serve" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">serve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">EndpointManagerParameters</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlflow_adsp.services.endpoint_manager.EndpointManager.serve" title="Link to this definition"></a></dt>
 <dd><p>Serves the designation marked model for REST API consumption.
 Reloads the model if changed.</p>
 <dl class="field-list simple">
@@ -165,7 +167,7 @@ Reloads the model if changed.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="mlflow_adsp.services.endpoint_manager.EndpointManager.update">
-<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlflow_adsp.services.endpoint_manager.EndpointManager.update" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#mlflow_adsp.services.endpoint_manager.EndpointManager.update" title="Link to this definition"></a></dt>
 <dd><p>(Re)starts the <cite>mlflow serve</cite> process if the model version changed.</p>
 </dd></dl>
 
@@ -173,7 +175,7 @@ Reloads the model if changed.</p>
 
 </section>
 <section id="module-mlflow_adsp.services.worker">
-<span id="worker"></span><h2>Worker<a class="headerlink" href="#module-mlflow_adsp.services.worker" title="Permalink to this heading"></a></h2>
+<span id="worker"></span><h2>Worker<a class="headerlink" href="#module-mlflow_adsp.services.worker" title="Link to this heading"></a></h2>
 <p>Worker Service Definition
 Invoked through an anaconda-project run command when the Anaconda Data Science Platform launches the job.</p>
 </section>

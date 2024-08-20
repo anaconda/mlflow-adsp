@@ -24,7 +24,9 @@ if __name__ == "__main__":
     load_dotenv(dotenv_path=local_env_config, override=True)  # take environment variables from .env.
 
     # Start Tests
-    cmd: str = "python -m pytest --cov-branch --cov=mlflow_adsp -vv --cov-append --cov-report=xml --show-capture=all -rP test/unit"
+    cmd: str = (
+        "python -m pytest --cov-branch --cov=mlflow_adsp -vv --cov-append --cov-report=xml --show-capture=all -rP test/unit"
+    )
     stdout, stderr, returncode = shell_out(shell_out_cmd=cmd)
 
     # Report Test Results
