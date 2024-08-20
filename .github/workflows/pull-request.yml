@@ -55,6 +55,7 @@ jobs:
     - name: Build Conda Package
       run: |
         anaconda-project run build
+    - name: Publish Conda Package (Dev Build)
       env:
         ANACONDA_TOKEN: ${{ secrets.ANACONDA_TOKEN }}
       run: |
