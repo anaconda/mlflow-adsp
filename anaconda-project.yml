@@ -75,10 +75,6 @@ env_specs:
     - defaults:pydantic>=2.0,<3
     - defaults:click
     - defaults:requests
-    - defaults:pip
-    - pip:
-        - mlserver
-        - mlserver-mlflow
 
     # Project Maintenance and Development
     - defaults:anaconda-project

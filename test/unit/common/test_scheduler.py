@@ -45,7 +45,7 @@ def test_execute_step(monkeypatch):
 
     # Review the results
     mock: MagicMock = mlflow.projects.run
-    mock.assert_called_once_with(**Step.parse_obj({}).dict(by_alias=False))
+    mock.assert_called_once_with(**mock_request.model_dump())
 
 
 ###############################################################################

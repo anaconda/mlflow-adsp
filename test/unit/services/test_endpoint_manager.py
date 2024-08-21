@@ -386,7 +386,7 @@ def test_poll_network_service_gracefully_fails(monkeypatch):
     client: MagicMock = MagicMock()
     monkeypatch.setattr(subprocess, "Popen", MockPOpen)
 
-    def mock_get(url):
+    def mock_get(url, timeout):
         raise requests.exceptions.ConnectionError("Boom!")
 
     monkeypatch.setattr(requests, "get", mock_get)
