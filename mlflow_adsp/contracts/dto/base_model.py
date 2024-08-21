@@ -30,11 +30,9 @@ def lower_camel_case(string: str) -> str:
 class BaseModel(PydanticBaseModel):
     """BaseModel [Pydantic] Over-Ride"""
 
-    # https://pydantic-docs.helpmanual.io/usage/model_config/#options
+    # Pydantic Config Over-Ride
     class Config:
-        """Pydantic Config Over-Ride"""
-
         alias_generator = lower_camel_case
-        allow_population_by_field_name = True
+        populate_by_name = True
         arbitrary_types_allowed = True
         use_enum_values = True

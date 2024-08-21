@@ -10,7 +10,15 @@ setup(
     packages=setuptools.find_packages(),
     author="Joshua C. Burt",
     python_requires=">=3.8",
-    install_requires=["mlflow>=2.3.0", "ae5-tools>=0.6.1", "psutil", "pydantic<2.0", "tqdm", "click", "requests"],
+    install_requires=[
+        "mlflow>=2.3.0",
+        "ae5-tools>=0.7,<1.0",
+        "psutil",
+        "pydantic>=2.0,<3",
+        "tqdm",
+        "click",
+        "requests",
+    ],
     entry_points={
         # Define a MLFlow Project Backend plugin called 'adsp'
         "mlflow.project_backend": "adsp=mlflow_adsp:adsp_backend_builder"
