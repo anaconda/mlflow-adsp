@@ -103,7 +103,7 @@ class EndpointManager:
 
         try:
             version_endpoint_url: str = f"http://{self.params.host}:{self.params.port}/version"
-            response: Response = requests.get(url=version_endpoint_url, timeout=1)
+            response: Response = requests.get(url=version_endpoint_url)
             if response.status_code != 200:
                 logger.debug("Service not yet healthy, waiting ..")
                 EndpointManager._proc_comm(process=process, timeout=self.params.timeout)
