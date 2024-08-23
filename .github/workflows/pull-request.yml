@@ -27,12 +27,12 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
+    - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
       with:
         fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
     - name: Install dependencies
       # https://github.com/conda-incubator/setup-miniconda
-      uses: conda-incubator/setup-miniconda@9f54435e0e72c53962ee863144e47a4b094bfd35 # v2
+      uses: conda-incubator/setup-miniconda@3b0f2504dd76ef23b6d31f291f4913fb60ab5ff3 # v2
       with:
         channels: defaults,ae5-admin
         auto-activate-base: true
@@ -55,9 +55,4 @@ jobs:
     - name: Build Conda Package
       run: |
         mkdir build
-        conda build conda-recipe --no-anaconda-upload --no-test --output-folder build
-    - name: Publish Conda Package (Dev Build)
-      env:
-        ANACONDA_TOKEN: ${{ secrets.ANACONDA_TOKEN }}
-      run: |
-        anaconda --verbose --token $ANACONDA_TOKEN upload --user ae5-admin --label dev build/noarch/mlflow-adsp-*.tar.bz2 --force
+        conda build conda-recipe --output-folder build
