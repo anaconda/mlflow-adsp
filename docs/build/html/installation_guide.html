@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Installation Guide &mdash; MLFlow Plugin For The Anaconda Data Science Platform 0.43.0+0.g454b369.dirty documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <title>Installation Guide &mdash; MLFlow Plugin For The Anaconda Data Science Platform 0.50.1+1.gd59aa8e.dirty documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=cbfd51ab"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -86,11 +88,11 @@
            <div itemprop="articleBody">
              
   <section id="installation-guide">
-<h1>Installation Guide<a class="headerlink" href="#installation-guide" title="Permalink to this heading"></a></h1>
+<h1>Installation Guide<a class="headerlink" href="#installation-guide" title="Link to this heading"></a></h1>
 <section id="process">
-<h2>Process<a class="headerlink" href="#process" title="Permalink to this heading"></a></h2>
+<h2>Process<a class="headerlink" href="#process" title="Link to this heading"></a></h2>
 <section id="configure-environment">
-<h3>1. Configure Environment<a class="headerlink" href="#configure-environment" title="Permalink to this heading"></a></h3>
+<h3>1. Configure Environment<a class="headerlink" href="#configure-environment" title="Link to this heading"></a></h3>
 <p>The below variables control authorization to the Anaconda Data Science Platform.
 These should be defined as AE5 secrets for the current user.  Alternatively they can also be set within the <code class="docutils literal notranslate"><span class="pre">anaconda-project.yml</span></code> project files.
 See <code class="docutils literal notranslate"><span class="pre">Variables</span></code> below for specific details on each.</p>
@@ -136,14 +138,14 @@ See <code class="docutils literal notranslate"><span class="pre">Variables</span
 <p>[2] This should be provided by your admin as per <a class="reference external" href="https://enterprise-docs.anaconda.com/en/latest/admin/advanced/mlflow_install.html">Adding MLflow to Anaconda Enterprise 5</a>.</p>
 </section>
 <section id="install-plugin">
-<h3>2. Install Plugin<a class="headerlink" href="#install-plugin" title="Permalink to this heading"></a></h3>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>https://conda.anaconda.org/joshburt<span class="w"> </span>mlflow-adsp<span class="w"> </span>
+<h3>2. Install Plugin<a class="headerlink" href="#install-plugin" title="Link to this heading"></a></h3>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>https://conda.anaconda.org/ae5-admin<span class="w"> </span>mlflow-adsp<span class="w"> </span>
 </pre></div>
 </div>
 </section>
 </section>
 <section id="variables">
-<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this heading"></a></h2>
+<h2>Variables<a class="headerlink" href="#variables" title="Link to this heading"></a></h2>
 <p><strong>Order of resolution</strong></p>
 <ol class="arabic simple">
 <li><p>Anaconda Project Variables</p></li>

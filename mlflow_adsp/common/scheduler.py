@@ -166,8 +166,7 @@ class Scheduler:
             An instance of `SubmittedRun` for the requested workflow step run.
         """
 
-        step_dict: Dict = step.dict(by_alias=False)
-
+        step_dict: Dict = step.model_dump()
         message: str = f"Launching new background job for: {step_dict}"
         logger.debug(message)
 

@@ -1,4 +1,5 @@
 """ Endpoint Manager Parameters Definition"""
+
 from typing import Optional
 
 from ae5_tools import demand_env_var, demand_env_var_as_bool, get_env_var

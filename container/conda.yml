@@ -10,7 +10,7 @@ dependencies:
   - ae5-admin:mlflow-adsp>=0.5,<1.0
   - defaults:tqdm
   - defaults:psutil
-  - defaults:pydantic<2.0
+  - defaults:pydantic>2.0
   - defaults:click
   - defaults:requests
   - defaults:pip

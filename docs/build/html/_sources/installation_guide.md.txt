@@ -25,7 +25,7 @@ See `Variables` below for specific details on each.
 ### 2. Install Plugin
 
 ```shell
-conda install -c https://conda.anaconda.org/ae5-admin mlflow-adsp
+conda install -c https://conda.anaconda.org/ae5-admin mlflow-adsp 
 ```
 
 ## Variables

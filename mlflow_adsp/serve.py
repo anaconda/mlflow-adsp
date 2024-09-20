@@ -1,6 +1,7 @@
 """
 Wraps `mlflow serve`. This is not meant to be executed directly, but called through the cli command `mlflow-adsp`.
 """
+
 import sys
 from typing import Optional
 

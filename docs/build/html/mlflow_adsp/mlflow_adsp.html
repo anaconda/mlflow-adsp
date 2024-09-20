@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Plugin API Documentation &mdash; MLFlow Plugin For The Anaconda Data Science Platform 0.43.0+0.g454b369.dirty documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <title>Plugin API Documentation &mdash; MLFlow Plugin For The Anaconda Data Science Platform 0.50.1+1.gd59aa8e.dirty documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=92fd9be5" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=cbfd51ab"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -89,9 +91,9 @@
            <div itemprop="articleBody">
              
   <section id="plugin-api-documentation">
-<h1>Plugin API Documentation<a class="headerlink" href="#plugin-api-documentation" title="Permalink to this heading"></a></h1>
+<h1>Plugin API Documentation<a class="headerlink" href="#plugin-api-documentation" title="Link to this heading"></a></h1>
 <section id="subpackages">
-<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading"></a></h2>
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading"></a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="mlflow_adsp.common.html">Common</a><ul>
@@ -117,7 +119,7 @@
 </div>
 </section>
 <section id="adsp-project-backend">
-<h2>ADSP Project Backend<a class="headerlink" href="#adsp-project-backend" title="Permalink to this heading"></a></h2>
+<h2>ADSP Project Backend<a class="headerlink" href="#adsp-project-backend" title="Link to this heading"></a></h2>
 <p>MLFlow Backend Plugin For Anaconda Data Science Platform Definition</p>
 <dl class="py class">
 <dt class="sig sig-object py">
@@ -132,7 +134,7 @@ Sub-classes the MLFlow <cite>AbstractBackend</cite> used for backend management.
 
 <dl class="py method">
 <dt class="sig sig-object py">
-<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">project_uri</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entry_point</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backend_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tracking_uri</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">experiment_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ADSPSubmittedRun</span></span></span></dt>
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">project_uri</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entry_point</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backend_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tracking_uri</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">experiment_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ADSPSubmittedRun</span></span></span></dt>
 <dd><p>The entry point for the execution.  Invoked by mlflow.projects.run when the backend is specified.
 See <a class="reference external" href="https://mlflow.org/docs/2.3.0/python_api/mlflow.projects.html#mlflow.projects.run">https://mlflow.org/docs/2.3.0/python_api/mlflow.projects.html#mlflow.projects.run</a> for
 in-depth details on these parameters.</p>
@@ -179,11 +181,11 @@ While passed by the caller it is ignored in this implementation.</p></li>
 
 </section>
 <section id="serve">
-<h2>Serve<a class="headerlink" href="#serve" title="Permalink to this heading"></a></h2>
+<h2>Serve<a class="headerlink" href="#serve" title="Link to this heading"></a></h2>
 <p>Wraps <cite>mlflow serve</cite>. This is not meant to be executed directly, but called through the cli command <cite>mlflow-adsp</cite>.</p>
 </section>
 <section id="adsp-submitted-run">
-<h2>ADSP Submitted Run<a class="headerlink" href="#adsp-submitted-run" title="Permalink to this heading"></a></h2>
+<h2>ADSP Submitted Run<a class="headerlink" href="#adsp-submitted-run" title="Link to this heading"></a></h2>
 <p>Anaconda Data Science Platform Submitted Run Definition</p>
 <dl class="py class">
 <dt class="sig sig-object py">

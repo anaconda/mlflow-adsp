@@ -47,7 +47,7 @@ def get_project_id() -> str:
     """
 
     if "TOOL_PROJECT_URL" in os.environ:
-        # When executing within a session this seems to be the most reliable method for getting a context id.
+        # When executing within a session, this seems to be the most reliable method for getting a context id.
         var_name: str = "TOOL_PROJECT_URL"
     elif "APP_SOURCE" in os.environ:
         # When executing within a scheduled job this seems to be the most reliable method for getting a context id.
