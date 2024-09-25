@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 registry.access.redhat.com/ubi8/ubi:latest@sha256:d5e2d1ddf34b573673581940f1341c7b3301ff8efde28f17100b31a3df7d94b6
+FROM --platform=linux/amd64 registry.access.redhat.com/ubi8/ubi:latest@sha256:a965f33ee4ee57dc8e40a1f9350ddf28ed0727b6cf80db46cdad0486a7580f9d
 
 # Perform Environment Maintenance
 RUN yum update && yum install -y gcc clang cmake
