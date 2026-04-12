@@ -11,7 +11,7 @@ setup(
     author="Joshua C. Burt",
     python_requires=">=3.8",
     install_requires=[
-        "mlflow>=2.3.0",
+        "mlflow>=3.11.1",
         "ae5-tools>=0.7,<1.0",
         "psutil",
         "pydantic>=2.0,<3",
