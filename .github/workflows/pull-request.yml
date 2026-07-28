@@ -54,8 +54,7 @@ jobs:
         anaconda-project run coverage xml
     - name: Build Conda Package
       run: |
-        source /usr/share/miniconda/etc/profile.d/conda.sh
-        conda activate github.action
+        conda install -n base -y conda-build
         mkdir build
         conda build conda-recipe --output-folder build
     - name: Publish Conda Package (Dev Build)
