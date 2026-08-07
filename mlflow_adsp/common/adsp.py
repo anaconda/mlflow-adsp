@@ -1,4 +1,4 @@
-""" Authentication / Authorization Helper Functions """
+"""Authentication / Authorization Helper Functions"""
 
 import os
 
