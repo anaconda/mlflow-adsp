@@ -1,4 +1,4 @@
-""" MLFlow Backend Plugin For Anaconda Data Science Platform Definition """
+"""MLFlow Backend Plugin For Anaconda Data Science Platform Definition"""
 
 import logging
 from typing import Dict, Optional, Union

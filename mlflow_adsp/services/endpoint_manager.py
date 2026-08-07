@@ -159,7 +159,7 @@ class EndpointManager:
     def _proc_comm(process: subprocess.Popen, timeout: int = 5):
         try:
             process.communicate(timeout=timeout)
-            (stdout, stderr) = process.communicate(timeout=timeout)
+            stdout, stderr = process.communicate(timeout=timeout)
             if stdout:
                 for line in iter(stdout.readline, b""):
                     logger.info(line)
