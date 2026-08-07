@@ -1,7 +1,7 @@
 FROM --platform=linux/amd64 registry.access.redhat.com/ubi8/ubi:latest@sha256:5f6964da75a155c1e8603c59a59e383ba8f4407eb1b46b0eff6f4125a288cd81
 
 # Perform Environment Maintenance
-RUN yum update && yum install -y gcc clang cmake
+RUN yum update -y && yum install -y gcc clang cmake
 
 # miniconda
 # https://docs.conda.io/en/latest/miniconda.html
@@ -22,7 +22,9 @@ RUN ~/miniconda3/bin/conda init bash
 RUN ~/miniconda3/bin/conda init zsh
 RUN ~/miniconda3/bin/conda config --set auto_activate_base true
 
-RUN source ~/.bashrc && conda update conda
+RUN source ~/.bashrc && conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main
+RUN source ~/.bashrc && conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r
+RUN source ~/.bashrc && conda update -y conda
 RUN source ~/.bashrc && conda install -c defaults conda-build setuptools anaconda-project -y
 
 # Configure Conda Runtime Environment

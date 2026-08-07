@@ -1,4 +1,4 @@
-""" Defines the structure of the internal job presentation used by the scheduler. """
+"""Defines the structure of the internal job presentation used by the scheduler."""
 
 from typing import List, Optional, Union
 
