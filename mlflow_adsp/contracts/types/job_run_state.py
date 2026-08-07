@@ -1,4 +1,4 @@
-""" Anaconda Enterprise Project Job Run State Type Definition """
+"""Anaconda Enterprise Project Job Run State Type Definition"""
 
 from enum import Enum
 

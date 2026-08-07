@@ -1,4 +1,4 @@
-""" Anaconda Data Science Platform Submitted Run Definition """
+"""Anaconda Data Science Platform Submitted Run Definition"""
 
 import logging
 import time
