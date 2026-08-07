@@ -1,4 +1,4 @@
-""" Process Handling Code  """
+"""Process Handling Code"""
 
 import logging
 import shlex

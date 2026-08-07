@@ -1,4 +1,4 @@
-""" Anaconda Data Science Platform MLFlow Plugin Exception Definition """
+"""Anaconda Data Science Platform MLFlow Plugin Exception Definition"""
 
 
 class ADSPMLFlowPluginError(Exception):

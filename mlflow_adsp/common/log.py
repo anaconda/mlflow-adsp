@@ -1,4 +1,4 @@
-""" This module contains logging functions. """
+"""This module contains logging functions."""
 
 import logging
 from typing import Optional
