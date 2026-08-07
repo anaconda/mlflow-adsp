@@ -1,4 +1,4 @@
-""" MLFlow Tracking Server Helpers """
+"""MLFlow Tracking Server Helpers"""
 
 import secrets
 import string

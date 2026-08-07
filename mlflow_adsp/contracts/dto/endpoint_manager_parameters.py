@@ -1,4 +1,4 @@
-""" Endpoint Manager Parameters Definition"""
+"""Endpoint Manager Parameters Definition"""
 
 from typing import Optional
 
