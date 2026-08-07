@@ -1,4 +1,4 @@
-""" Scheduler for MLFlow Workflow Steps On ADSP """
+"""Scheduler for MLFlow Workflow Steps On ADSP"""
 
 import logging
 import time

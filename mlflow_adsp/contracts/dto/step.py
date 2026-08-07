@@ -1,4 +1,4 @@
-""" Execute Step Definition """
+"""Execute Step Definition"""
 
 from typing import Dict, Optional
 
