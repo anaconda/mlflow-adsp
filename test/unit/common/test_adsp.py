@@ -52,18 +52,15 @@ def test_get_project_id_in_job():
     assert project_id == "a0-mock-tool-project-url-id"
 
 
-def test_get_project_id_in_session():
-    if "TOOL_PROJECT_URL" in os.environ:
-        del os.environ["TOOL_PROJECT_URL"]
+def test_get_project_id_in_session(monkeypatch):
+    monkeypatch.delenv("TOOL_PROJECT_URL", raising=False)
     project_id: str = get_project_id()
     assert project_id == "a0-mock-app-source-id"
 
 
-def test_get_project_id_should_gracefully_fail():
-    if "TOOL_PROJECT_URL" in os.environ:
-        del os.environ["TOOL_PROJECT_URL"]
-    if "APP_SOURCE" in os.environ:
-        del os.environ["APP_SOURCE"]
+def test_get_project_id_should_gracefully_fail(monkeypatch):
+    monkeypatch.delenv("TOOL_PROJECT_URL", raising=False)
+    monkeypatch.delenv("APP_SOURCE", raising=False)
     with pytest.raises(ADSPMLFlowPluginError) as context:
         get_project_id()
     assert str(context.value) == "Unable to determine execution context.  Did this execute in ADSP?"
