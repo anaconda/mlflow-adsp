@@ -1,4 +1,4 @@
-""" mlflow-asdp namespace """
+"""mlflow-asdp namespace"""
 
 from . import _version
 from .backend import ADSPProjectBackend, adsp_backend_builder
